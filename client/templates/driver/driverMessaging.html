@@ -1,0 +1,28 @@
+<template name="driverMessaging">
+  {{> _driverTabsHeader}}
+
+  {{#ionContent class="padding"}}
+    <h1>Messaging</h1>
+
+ {{#ionView}}
+    {{#ionContent}}
+      {{#ionList}}
+
+        {{#ionItem iconLeft=true iconRight=false}}
+          {{> ionIcon icon="person" class="positive"}}
+           When and where should i meet you?
+        {{/ionItem}}
+
+        {{#ionItem iconLeft=false iconRight=true}}
+            I'll pick you up from the train station at 11:00am
+          {{> ionIcon icon="model-s"}}
+        {{/ionItem}}
+
+      {{/ionList}}
+    {{/ionContent}}
+  {{/ionView}}
+
+	{{/ionContent}}
+
+  {{> _driverTabs}}
+</template>

@@ -1,0 +1,55 @@
+<template name="join">
+  <div class="page auth">
+     {{#ionHeaderBar class="bar-positive"}}
+    
+    <h1 class="title">UPS Helper App</h1>
+	<button class="button button-clear" data-ion-popover="_myPopover">
+      {{#if isAndroid}}
+        {{> ionIcon icon='android-more-vertical'}}
+      {{else}}
+        {{> ionIcon icon='more'}}
+      {{/if}}
+    </button>
+  {{/ionHeaderBar}}
+
+    <div class="content overflow-scroll has-header">
+      <div class="wrapper-auth">
+        <h1 class="title-auth">Register</h1>
+        <p class="subtitle-auth" >Request Access to the UPS Helper App</p>
+
+        <form>
+          {{#if errorMessages}}
+            <div class="list-errors">
+              {{#each errorMessages}}
+                <div class="list-item">{{this}}</div>
+              {{/each}}
+            </div>
+          {{/if}}
+
+		  <div class="input-symbol  {{errorClass 'firstname'}}">
+            <input type="text" class='holo' name="firstname" placeholder="First Name" />
+          </div>
+		  
+		  <div class="input-symbol  {{errorClass 'lastname'}}">
+            <input type="text" class='holo' name="lastname" placeholder="Last Name" />
+          </div>
+		  
+          <div class="input-symbol  {{errorClass 'username'}}">
+            <input type="text" class='holo' name="username" placeholder="User Name" />
+          </div>
+
+          <div class="input-symbol  {{errorClass 'password'}}">
+            <input type="password" class='holo' name="password" placeholder="Password" />
+          </div>
+
+          <div class="input-symbol {{errorClass 'confirm'}}">
+            <input type="password" class='holo' name="confirm" placeholder="Confirm Password" />
+          </div>
+		
+          <button type="submit"  class="button button-positive button-block">Submit</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</template>

@@ -1,0 +1,55 @@
+<template name="helperHome">
+  {{#ionView}}
+    {{> _helperTabsHeader}}
+
+    {{#ionContent class="padding"}}
+
+ 	<!--{{> PlannedHours}}-->
+ 	{{> assignmentDetails}}
+
+<div class="card" style="background-color:#f8f8f8;">
+	<h3>5 Day Bonus Progress: </h3>
+		<div class="item item-text-wrap">
+			{{>progress progress=.2 class="green"}}
+		</div>	
+</div>	
+
+<div class="card" style="background-color:#f8f8f8;">
+	<h3>Today's Progress: </h3>
+		<div class="item item-text-wrap">
+			{{>progress progress=.5 class="green"}}
+		</div>	
+</div>	
+		
+<button id="btnPunch" style='font-size:24px;' class="button button-block button-balanced">Punch In <i class="ion-android-time"></i></button>	
+		
+		
+    {{/ionContent}}
+    {{> _helperTabs}}
+  {{/ionView}}
+</template>
+
+<template name="PlannedHours">
+<div class="card" id="crdPlannedHours" style="display:none;background-color:#f8f8f8;">
+	<h3 id='headertext'>Enter Planned Hours: </h3>
+		<div class="item item-text-wrap">
+			<div class="row">
+				<div class="col col-offset-10"><i  style='font-size:30px;' class="ion-plus padright"></i></div>
+				<div class="col"><input id='txt_planned_hours' class='search hourbox' type='text'></div>
+				<div class="col col-offset-10"><i style='font-size:30px;' class="ion-minus padleft"></i></div>
+			</div>	
+		</div>
+</div>
+</template>
+
+<template name="assignmentDetails">
+<div class="card" id="crdAssignmentDetails" style="display:block;background-color:#f8f8f8;">
+	<h3 class ="assignmentHeader">Assignment Details: </h3>
+	<ul class="list">
+		<li><span class="assignTitle">Assigned Route: </span><span class="assignContent">{{route}}</span></li><br>
+		<li><span class="assignTitle">Driver Name: </span><span class="assignContent">{{driver}}</span></li><br>
+		<li><span class="assignTitle">Planned Start Time: </span> <span class="assignContent">{{start}}</span></li><br>
+		<li><span class="assignTitle">Planned End Time: </span> <span class="assignContent">{{end}}</span></li>
+	</ul>
+</div>
+</template>

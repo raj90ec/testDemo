@@ -1,0 +1,26 @@
+<template name="helperMessaging">
+    {{#ionView}}
+
+    {{> _helperTabsHeader}}
+
+    {{#ionContent class="padding"}}
+    <h1>Messaging</h1>
+    {{#ionView}}
+    {{#ionContent}}
+    {{#ionList}}
+    {{#ionItem iconLeft=false iconRight=true}}
+    When and where should i meet you?
+    {{> ionIcon icon="person" class="positive"}}
+    {{/ionItem}}
+    {{#ionItem iconLeft=true iconRight=false}}
+    {{> ionIcon icon="model-s"}}
+    I'll pick you up from the train station at 11:00am
+    {{/ionItem}}
+    {{/ionList}}
+    {{/ionContent}}
+    {{/ionView}}
+    {{/ionContent}}
+
+    {{> _helperTabs}}
+      {{/ionView}}
+</template>

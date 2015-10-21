@@ -1,0 +1,243 @@
+
+$loading-font-size: 22px;
+$bar-height:                      60px !default;
+$font-family-sans-serif:          "Segoe UI", sans-serif !default;
+$font-family-light-sans-serif:    "Segoe UI-Light", sans-serif-light !default;
+$bar-positive-text:            #ffb500 !default;
+$bar-title-font-size:  22px;
+
+
+@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/_ionic';
+@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/_ionicons';
+@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/ionic';
+
+.ionic-body.platform-android {
+  font-family: "Segoe UI", sans-serif;
+
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Segoe UI", sans-serif;
+  }
+
+  .tab-item {
+    font-family: "Segoe UI", sans-serif;
+  }
+}
+
+.ion-slide {
+  text-align: center;
+  padding-top: 200px;
+
+  &.dark-bg {
+    h3 {
+      color: #fff;
+    }
+  }
+}
+
+.bar .title.title-left {
+    text-align: left;
+	margin-left:50px;
+}
+
+.popover {
+  height: auto;
+}
+
+.bar.bar-header.bar-positive {
+    border-color: #ffb500;
+    background-color: #351c15;
+    background-image: linear-gradient(0deg, #351c15, #351c15 50%, transparent 50%);
+	border-bottom-width:3px;
+    color: #fff;
+}
+
+
+.brand{
+	margin-top:3px;
+    height:100%;
+
+
+}
+
+.overflow-scroll{
+	padding-top:10px;
+}
+
+
+
+.search.hourbox{
+	font-size:30px;
+	width:50px;
+	height:45px;
+	padding-top:0px;
+    border: 1px;
+    border-color: black;
+    border-width: thin;
+    border-style: solid;
+	padding-left:5px;
+}
+
+path {
+    fill: #ffb500;
+}​
+
+
+
+.progress.component.green{
+	height:40px;
+}
+
+.progress{
+	height:40px;
+}
+
+.item-icon-right .miles{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    font-size: 15px;
+	font-color:#000;
+}
+
+.progress.component.green .bar .fill {
+    background-image: -moz-linear-gradient(left, orange 0%, orange 100%);
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, orange), color-stop(100%, orange));
+    background-image: -webkit-linear-gradient(left, orange 0%, orange 100%);
+    background-image: -o-linear-gradient(left, orange 0%, orange 100%);
+    background-image: -ms-linear-gradient(left, orange 0%, orange 100%);
+    background-image: linear-gradient(to right, orange 0%, orange 100%);
+	height:40px;
+}
+
+.map-container {
+  width: 100%;
+  max-width: 100%;
+  height: 300px;
+}
+
+
+
+.item-button-left, .item-button-right {
+  button {
+    top: 16px !important;
+  }
+}
+
+.coordbody{
+  font-family: sans-serif;
+  background-color: white;
+  background-image: linear-gradient(to bottom, #d2edf4, #eee 100%);
+  background-attachment: fixed;
+
+}
+
+
+
+.container {
+    font-family: sans-serif;
+  background-color: #ffd800;
+  background-image: linear-gradient(to bottom, #ffd800, #ff0000 100%);
+  background-attachment: fixed;
+
+  float:right;
+  top: 50px;
+  bottom: 500px;
+  left:0px;
+  
+
+  padding:0px;
+  margin: 0;
+
+
+  font-size: 12px;
+  max-width: 300px;
+ 
+  margin:4px;
+  min-height: 150%;
+  background: white;
+ 
+}
+
+.coordtab {
+ /* background: #d2edf4;
+  background-image: linear-gradient(to bottom, #00ff90,#00ff90 100%);
+  padding: 20px 15px 15px 15px;
+  position: relative;*/
+
+  color: white;
+  background-color: #009dd9;
+  text-align: left;
+  padding-top: 14px;
+  padding-bottom: 14px;
+} 
+
+/*.coordtab1 {
+  font-size: 1.5em;
+  margin: 0;
+  margin-bottom: 10px;
+  display: inline-block;
+  margin-right: 1em;
+} */
+
+.listcoord {
+  position: relative;
+  list-style: none;
+  padding: 15px;
+  border-bottom: #eee solid 1px;
+  text-align: center;
+}
+
+.reset-button {
+  text-align: center;
+}
+
+.reset-password {
+  background: none;
+  border: none;
+  color: blue;
+}
+
+.login-inputs{
+  width: 143px;
+  margin: 0 auto;
+  padding-bottom:8px;
+}
+
+.assignTitle{
+  float: left;
+}
+
+.assignContent{
+  font-weight: bold;
+  float: right;
+}
+
+.assignmentHeader{
+  color: white;
+  background-color: #009dd9;
+  text-align: center;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+#crdPlannedHours{
+  display: none;
+}
+
+#headertext{
+  text-align: center;
+  padding-top: 6.6px;
+  padding-bottom: 6.6px;
+}

@@ -1,0 +1,30 @@
+<template name="helperMaps">
+  {{> _helperTabsHeader}}
+
+  {{#ionContent class="padding"}}
+  <h1>Maps</h1>
+  
+  <div class="map-container">
+    {{#unless geolocationError}}
+	{{> googleMap name="map" options=mapOptions}}
+    {{else}}
+      Geolocation failed: {{geolocationError}}
+    {{/unless}}
+ </div>
+ 
+<div id='marker-click'>      
+<div class="list" id='edd_list'>
+    
+     
+
+ 
+    
+  </div>
+</div>
+  
+  {{/ionContent}}
+
+  {{> _helperTabs}}
+  
+   
+</template>

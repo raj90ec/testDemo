@@ -1,0 +1,44 @@
+<template name="coordRoute">
+    {{> _coordTabsHeader}}
+{{#if isCoordinator}}
+{{#ionContent class="padding"}}
+    
+        <p class="subtitle-auth">Add Route</p>
+    {{#if errorMessages}}
+    <div class="list-errors">
+        {{#each errorMessages}}
+        <div class="list-item">{{this}}</div>
+        {{/each}}
+    </div>
+    {{/if}}
+            <form>
+            <div class="list">
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Route Number</span>
+                    <input type="text" name="routeNum" placeholder="02A">
+                    <span class="input-label">SLIC</span>
+                    <input type="text" name="SLIC" placeholder="Enterslic">
+                </label>
+                <button id ="addRoute" class="button button-positive button-block submitUser">
+                    Submit
+                </button>
+            </div>
+            </form>
+    <div class="page auth">
+        <nav>
+            <div class="nav-group">
+                <a href="#" class="js-menu nav-item"><span class="icon-list-unordered"></span></a>
+            </div>
+        </nav>
+    </div>
+
+    {{/ionContent}}
+  {{> _coordTabs}}
+{{else}}
+    {{#ionContent class="padding"}}
+  <div class="page auth">
+    <h1 class="title-auth">Not Authorized</h1>
+  </div>
+    {{/ionContent}}
+{{/if}}
+ </template>

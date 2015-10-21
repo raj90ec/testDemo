@@ -1,0 +1,17 @@
+<template name="_helperTabsHeader">
+ {{#ionHeaderBar class="bar-positive "}}
+{{> helperHeader}}
+	
+	{{#if currentUser}}
+	<!--
+  button class="button button-clear" data-ion-popover="_myPopover">
+      {{#if isAndroid}}
+        {{> ionIcon icon='android-more-vertical'}}
+      {{else}}
+        {{> ionIcon icon='more'}}
+      {{/if}}
+    </button>
+  -->
+	{{/if}}
+  {{/ionHeaderBar}}
+</template>

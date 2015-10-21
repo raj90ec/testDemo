@@ -1,0 +1,51 @@
+<template name="coordUsers">
+{{#if isCoordinator}}
+    {{> _coordTabsHeader}}
+{{#ionContent class="padding"}}
+            <p class="subtitle-auth">Add Drivers and Helpers</p>
+            <form>
+            <div class="list">
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Employee ID</span>
+                    <input type="text" name="empID" placeholder="4043412">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">First Name</span>
+                    <input type="text" name="firstName" placeholder="John">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Last Name</span>
+                    <input type="text" name="lastName" placeholder="Thomas">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Driver/Helper</span>
+                    <select name="userType" id="userType" style=" width:150px; " >
+                        <option value="" selected="selected"> Select </option>
+                        <option  value="driver">Driver</option>
+                        <option  value="helper">Helper</option>
+                    </select>
+                </label>
+                <br />
+                <button class="button button-positive button-block submitUser">
+                    Submit
+                </button>
+            </div>
+            </form>
+    <div class="page auth">
+        <nav>
+            <div class="nav-group">
+                <a href="#" class="js-menu nav-item"><span class="icon-list-unordered"></span></a>
+            </div>
+        </nav>
+    </div>
+
+    {{/ionContent}}
+  {{> _coordTabs}}
+{{else}}
+    {{#ionContent class="padding"}}
+  <div class="page auth">
+    <h1 class="title-auth">Not Authorized</h1>
+  </div>
+    {{/ionContent}}
+{{/if}}
+ </template>

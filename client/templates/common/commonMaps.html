@@ -1,0 +1,48 @@
+<template name="commonMaps">
+  <!--ADD THE REST-->
+  {{#if isCoord}}
+    {{> _coordTabsHeader}}
+  {{/if}}
+
+  {{#if isHelper}}
+    {{> _helperTabsHeader}}
+  {{/if}}
+
+  {{#if isDriver}}
+    {{> _driverTabsHeader}}
+  {{/if}}
+
+  {{#ionContent class="padding"}}
+  <h1>Maps</h1>
+  
+  <div class="map-container">
+    {{#unless geolocationError}}
+	{{> googleMap name="map" options=mapOptions}}
+    {{else}}
+      Geolocation failed: {{geolocationError}}
+    {{/unless}}
+ </div>
+ 
+<div id='marker-click'>      
+<div class="list" id='edd_list'>
+       
+  </div>
+</div>
+  
+  {{/ionContent}}
+
+  {{#if isCoord}}
+    {{> _coordTabs}}
+  {{/if}}
+
+  {{#if isHelper}}
+    {{> _helperTabs}}
+  {{/if}}
+
+  {{#if isDriver}}
+    {{> _driverTabs}}
+  {{/if}}
+  
+  
+   
+</template>

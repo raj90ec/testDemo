@@ -1,0 +1,32 @@
+<template name="adminHome">
+{{#if isAdmin}} 
+    {{> _adminTabsHeader}}
+    {{#ionContent class="padding"}}
+    <div class="page auth">
+        <nav>
+            <div class="nav-group">
+                <a href="#" class="js-menu nav-item"><span class="icon-list-unordered"></span></a>
+            </div>
+        </nav>
+        <div class="content-scrollable">
+            <br /><br /><br /><br />
+                <h1 class="subtitle-auth">Admin Home</h1>
+                <br /><br />
+                Please navigate between the tabs to: <br />
+                Add Coordinators <br />
+                Add Service Areas <br />
+                Add Routes
+            </div>
+
+        </div>
+                        
+   {{/ionContent}}
+    {{> _adminTabs}}
+{{else}}
+    {{#ionContent class="padding"}}
+  <div class="page auth">
+    <h1 class="title-auth">Not Authorized</h1>
+  </div>
+    {{/ionContent}}
+{{/if}}
+</template>

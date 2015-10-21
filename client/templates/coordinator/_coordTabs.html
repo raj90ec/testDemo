@@ -1,0 +1,21 @@
+<template name="_coordTabs">
+  {{#if isAndroid}}
+    {{#ionTabs style="android" class="tabs-background-stable tabs-color-dark"}}
+      {{> ionTab title="Home" path="coord.home" icon="home"}}
+      {{> ionTab title="Users" path="coord.users" icon="person-add"}}
+      {{> ionTab title="Maps" path="coord.maps" icon="earth"}}
+      {{> ionTab title="Routes" path="coord.route" icon="earth"}}
+      {{> ionTab title="Chat" path="coord.messaging" icon="chatbox-working"}}
+    {{/ionTabs}}
+  {{else}}
+    {{#ionTabs style="ios"}}
+      {{> ionTab title="Home" path="coord.home" iconOff="ios-home" iconOn="ios-home"}}
+      {{> ionTab title="Users" path="coord.users" iconOff="ios-personadd" iconOn="ios-personadd"}}
+      {{> ionTab title="Maps" path="coord.maps" iconOff="earth" iconOn="earth"}}
+      {{> ionTab title="Routes" path="coord.route" iconOff="earth" iconOn="earth"}}
+      {{> ionTab title="Chat" path="coord.messaging" iconOff="chatbox-working" iconOn="chatbox-working"}}
+    {{/ionTabs}}
+  {{/if}}
+</template>
+
+

@@ -1,0 +1,54 @@
+<template name="coordHome">
+    {{#if isCoordinator}}
+        {{> _coordTabsHeader}}
+        {{#ionContent class="padding"}}
+        <div class="card">
+          <h3 class="coordtab">Unassigned Helpers</h3>
+        <ul class="list1">
+            {{#each helpers}}
+            <li class="listcoord">{{this}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    <div class="card">
+        <h3 class="coordtab">Available Routes</h3>
+        <ul class="list1">
+            {{#each routes}}
+            <li class="listcoord">{{this}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    <div class="card">
+        <h3 class="coordtab">Active Assigned Helpers</h3>
+        <ul class="list1">
+            {{#each activehelpers}}
+            <li class="listcoord">{{this}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    <div class="card">
+        <h3 class="coordtab">Inactive Assigned Helpers</h3>
+        <ul class="list1">
+            {{#each inactivehelpers}}
+            <li class="listcoord">{{this}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    <div class="card">
+        <h3 class="coordtab">Completed Assignments</h3>
+        <ul class="list1">
+            {{#each tasks3}}
+            {{> task3}}
+            {{/each}}
+        </ul>
+    </div>    
+    {{/ionContent}}
+                
+                   
+               
+    {{else}}
+    <div class="page auth">
+        <h1 class="title-auth">Not Authorized</h1>
+    </div>
+    {{/if}}
+</template>

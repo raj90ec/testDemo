@@ -1,0 +1,17 @@
+<template name="_driverTabs">
+  {{#if isAndroid}}
+    {{#ionTabs style="android" class="tabs-background-stable tabs-color-dark"}}
+      <!--{{> ionTab title="Home" path="helper.home" icon="home"}}-->
+      <!--{{> ionTab title="Dispatch" path="helper.dispatch" icon="navigate"}}-->
+      {{> ionTab title="Maps" path="driver.maps" icon="ion-lock-combination"}}
+      {{> ionTab title="Chat" path="driver.messaging" icon="chatbox-working"}}
+    {{/ionTabs}}
+  {{else}}
+    {{#ionTabs style="ios"}}
+      <!--{{> ionTab title="Home" path="helper.home" iconOff="ios-home" iconOn="ios-home"}}-->
+      <!--{{> ionTab title="Dispatch" path="helper.dispatch" iconOff="navigate" iconOn="navigate"}}-->
+      {{> ionTab title="Maps" path="driver.maps" iconOff="ion-lock-combination" iconOn="ion-lock-combination"}}
+      {{> ionTab title="Chat" path="driver.messaging" iconOff="chatbox-working" iconOn="chatbox-working"}}
+    {{/ionTabs}}
+  {{/if}}
+</template>

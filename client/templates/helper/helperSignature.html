@@ -1,0 +1,21 @@
+<template name="helperSigpad">
+  {{#ionView}}
+    {{> _helperTabsHeader}}
+
+    {{#ionContent class="padding"}}
+
+	<h3>Sign: </h3>
+	  <div id="signature-pad" class="m-signature-pad">
+    <div class="m-signature-pad--body">
+      <canvas></canvas>
+    </div>
+    <div class="m-signature-pad--footer">
+      <button class="button clear" data-action="clear">Clear</button>
+      <button class="button save" data-action="save">Save</button>
+    </div>
+  </div>
+
+    {{/ionContent}}
+    {{> _helperTabs}}
+  {{/ionView}}
+</template>

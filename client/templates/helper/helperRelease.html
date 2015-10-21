@@ -1,0 +1,24 @@
+<template name="helperRelease">
+  {{#ionView}}
+    {{> _helperTabsHeader}}
+    {{#ionContent class="padding"}}
+		<div class="card" style="background-color:#f8f8f8;">
+			<h3>Package Release: </h3>
+			<div id='marker-click'> 
+				<div class="list" id='packagelist'>
+					<a class="item item-icon-left"><i class="icon light"></i>1Z070003039853<b>2473</b></a>
+					<a class="item item-icon-left"><i class="icon light"></i>1Z070003039853<b>2484</b></a>
+					<a class="item item-icon-left"><i class="icon light"></i>1Z070003039853<b>2495</b></a>
+				</div>	
+			</div>				
+		</div>
+		<button class="button button-balanced button-block" id="btnPackages" style="border: none;">Release Package(s)  <i class="ion-cube"></i></button>
+		<button class="button button-positive button-block" id="btnSignature" style="border: none;">Get Signature  <i class="ion-edit"></i></button>
+		<button class="button button-assertive button-block" id="btnDelivery" style="border: none;">Non-Delivery  <i class="ion-information-circled"></i></button>
+		
+		<br/>
+		<button type="submit" class="button button-dark button-block" id="btnBack" style="border: none;">Back to Address List <i class="ion-arrow-left-a"></i></button>
+    {{/ionContent}}
+    {{> _helperTabs}}
+  {{/ionView}}
+</template>

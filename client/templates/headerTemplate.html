@@ -1,0 +1,22 @@
+<template name="helperHeader">
+    <!--<a href='/index'>-->
+    <img class='brand' src="/ups-logo.png" />
+    <!--</a>-->
+    {{#if currentUser}}
+        {{#if isAdmin}}
+        <h1 class="title title-left">  UPS Helper App Admin</h1>
+        {{/if}}
+        {{#if isDriver}}
+        <h1 class="title title-left">  UPS Driver App</h1>
+        {{/if}}
+        {{#if isHelper}}
+        <h1 class="title title-left">  UPS Helper App</h1>
+        {{/if}}
+        {{#if isCoordinator}}
+        <h1 class="title title-left">  UPS Helper Coordinator App{{#if userSlic}} - {{userSlic}} {{/if}}</h1>
+        {{/if}}
+    {{else}}
+    <h1 class="title title-left">  UPS Helper App - Login</h1>
+    {{/if}}
+
+</template>

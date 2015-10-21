@@ -1,0 +1,19 @@
+<template name="_adminTabs">
+  {{#if isAndroid}}
+    {{#ionTabs style="android" class="tabs-background-stable tabs-color-dark"}}
+      {{> ionTab title="Home" path="admin.home" icon="home"}}
+      {{> ionTab title="Add Coordinators" path="admin.addcoord" icon="person-add"}}
+      {{> ionTab title="Add Service Areas" path="admin.addservicearea" icon="android-locate"}}
+      <!--{{> ionTab title="Chat" path="helper.messaging" icon="chatbox-working"}}-->
+    {{/ionTabs}}
+  {{else}}
+    {{#ionTabs style="ios"}}
+      {{> ionTab title="Home" path="admin.home" iconOff="ios-home" iconOn="ios-home"}}
+     {{> ionTab title="Add Coordinators" path="admin.addcoord" iconOff="ios-personadd" iconOn="ios-personadd"}}
+      {{> ionTab title="Add Service Areas" path="admin.addservicearea" iconOff="android-locate" iconOn="android-locate"}}
+      <!--{{> ionTab title="Chat" path="helper.messaging" iconOff="chatbox-working" iconOn="chatbox-working"}}-->
+    {{/ionTabs}}
+  {{/if}}
+</template>
+
+

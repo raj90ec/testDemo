@@ -1,0 +1,23 @@
+<template name="_helperTabs">
+  {{#if isAndroid}}
+    {{#ionTabs style="android" class="tabs-background-stable tabs-color-dark"}}
+      {{> ionTab title="Home" path="helper.home" icon="home"}}
+      {{> ionTab title="Dispatch" path="helper.dispatch" icon="navigate"}}
+      {{> ionTab title="Maps" path="helper.maps" icon="earth"}}
+      {{> ionTab title="Chat" path="helper.messaging" icon="chatbox-working"}}
+	  <!--{{> ionTab title="Feedback" path="helper.feedback" icon="ribbon-b"}}
+      {{> ionTab title="Safety" path="helper.safety" icon="help-buoy"}}-->
+    {{/ionTabs}}
+  {{else}}
+    {{#ionTabs style="ios"}}
+      {{> ionTab title="Home" path="helper.home" iconOff="ios-home" iconOn="ios-home"}}
+      {{> ionTab title="Dispatch" path="helper.dispatch" iconOff="navigate" iconOn="navigate"}}
+      {{> ionTab title="Maps" path="helper.maps" iconOff="earth" iconOn="earth"}}
+      {{> ionTab title="Chat" path="helper.messaging" iconOff="chatbox-working" iconOn="chatbox-working"}}
+	  <!--{{> ionTab title="Feedback" path="helper.feedback" iconOff="ribbon-b" iconON="ribbon-b"}}
+      {{> ionTab title="Safety" path="helper.safety" iconOff="help-buoy" iconOn="help-buoy"}}-->
+    {{/ionTabs}}
+  {{/if}}
+</template>
+
+

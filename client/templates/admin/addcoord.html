@@ -1,0 +1,65 @@
+<template name="adminAddcoord">
+    {{#if isAdmin}}
+    {{> _adminTabsHeader}}
+    {{#ionContent class="padding"}}
+    <div class="page auth">
+        <nav>
+            <div class="nav-group">
+                <a href="#" class="js-menu nav-item"><span class="icon-list-unordered"></span></a>
+            </div>
+        </nav>
+        <div class="content-scrollable">
+            <div class="wrapper-auth" style="padding-top:100px;">
+                <p class="subtitle-auth">Add Coordinators</p>
+                {{#if errorMessages}}
+                <div class="list-errors">
+                    {{#each errorMessages}}
+                    <div class="list-item">{{this}}</div>
+                    {{/each}}
+                </div>
+                {{/if}}
+                <div class="list">
+                    <form>
+                        <label class="item item-input item-stacked-label">
+                            <span class="input-label">Enter Employee ID</span>
+                            <input type="text" placeholder="4043412" id="empID">
+                        </label>
+                        <label class="item item-input item-stacked-label">
+                            <span class="input-label">Enter First Name</span>
+                            <input type="text" placeholder="John" id="firstName">
+                        </label>
+                        <label class="item item-input item-stacked-label">
+                            <span class="input-label">Enter Last Name</span>
+                            <input type="text" placeholder="Thomas" id="lastName">
+                        </label>
+                        <label class="item item-input item-stacked-label">
+                            <span class="input-label">Enter SLIC</span>
+                            <br /><br />
+                            <select name="SLIC" id="SLIC" style=" width:150px; ">
+                                <option value="" selected="selected"> Select One </option>
+                                {{#each SLICList}}
+                                <option value="{{this}}">{{this}}</option>
+                                {{/each}}
+
+
+                            </select>
+                            <br /><br />
+                        </label>
+                    </form>
+                    <button id="addCoord" class="button button-positive">
+                        Submit Coordinator
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    {{/ionContent}}
+    {{> _adminTabs}}
+    {{else}}
+    <div class="page auth">
+        <h1 class="title-auth">Not Authorized</h1>
+    </div>
+    {{/if}}
+</template>

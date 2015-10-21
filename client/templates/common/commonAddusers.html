@@ -1,0 +1,91 @@
+<!--
+<head>
+  <title>Add Users</title>
+</head>
+
+<body>
+  <h1>Welcome! </h1>
+
+  {{>addusers}}
+</body>
+-->
+
+<template name="commonAdduser">
+    {{#if isAdmin}}
+    {{> _adminTabs Header}}
+  {{/if}}
+
+  {{#if isCoord}}
+    {{> _coordTabsHeader}}
+  {{/if}}
+
+    <div class="page auth">
+        <nav>
+            <div class="nav-group">
+                <a href="#" class="js-menu nav-item"><span class="icon-list-unordered"></span></a>
+            </div>
+        </nav>
+        <div class="content-scrollable">
+            <div class="wrapper-auth">
+                {{#if isAdmin}}
+            
+                  
+                <p class="subtitle-auth">Add users to UPS Helper</p>
+                
+                <form>
+                  
+                    <button id="makeCoordinator" class="btn-primary">Helper Coordinator</button>
+                    </form>
+                    <form>
+                    <button id="makeDriver" class="btn-primary">Add Service Area</button>
+                    </form>
+                    
+                    {{/if}}
+                  {{#if isCoord}}
+                  <form>
+                    <button id="makeDriver" class="btn-primary">Add Driver</button>
+                    </form>
+                    <form>
+                    <button id="makeHelper" class="btn-primary">Add Helper</button>
+                </form>
+                
+                    
+                    
+                {{else}}
+                <h1 class="title-auth">Not Authorized</h1>
+            
+                <p class="subtitle-auth">Add users to UPS Helper</p>
+                <form>
+               
+  <button id="makeCoordinator" class="btn-primary">Helper Coordinator</button> 
+    
+  </form>
+                    <form>
+                    <button id="makeDriver" class="btn-primary">Driver</button>
+                    </form>
+                    <form>
+                    <button id="makeHelper" class="btn-primary">Helper</button>
+                </form>
+                {{/if}}
+                
+               
+                    
+                
+           
+              
+
+             
+            </div>
+
+        </div>
+    </div>
+
+  {{#if isAdmin}}
+    {{> _adminTabs}}
+  {{/if}}
+
+  {{#if isCoord}}
+    {{> _coordTabs}}
+  {{/if}}
+
+</template>

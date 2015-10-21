@@ -1,0 +1,55 @@
+<template name="adminAddservicearea">
+    {{#if isAdmin}}
+    {{> _adminTabsHeader}}
+    {{#ionContent class="padding"}}
+    <div class="page auth">
+        <nav>
+            <div class="nav-group">
+                <a href="#" class="js-menu nav-item"><span class="icon-list-unordered"></span></a>
+            </div>
+        </nav>
+        <div class="content-scrollable">
+            <div class="wrapper-auth" style="padding-top:100px;">
+                <p class="subtitle-auth">Service Areas</p>
+                {{#if errorMessages}}
+                <div class="list-errors">
+                    {{#each errorMessages}}
+                    <div class="list-item">{{this}}</div>
+                    {{/each}}
+                </div>
+                {{/if}}
+                <div class="list">
+                    <form>
+                        <label class="item item-input item-stacked-label">
+                            <span class="input-label">Enter SLIC</span>
+                            <input type="text" placeholder="09999" id="SLIC">
+                        </label>
+                        <label class="item item-input item-stacked-label">
+                            <span class="input-label">Enter Region</span>
+                            <input type="text" placeholder="20" id="region">
+                        </label>
+                        <label class="item item-input item-stacked-label">
+                            <span class="input-label">Enter District</span>
+                            <input type="text" placeholder="29" id="district">
+                        </label>
+                        <label class="item item-input item-stacked-label">
+                            <span class="input-label">Enter Division</span>
+                            <input type="text" placeholder="123456" id="division">
+                        </label>
+                    </form>
+                </div>
+                <button id="submitServiceArea" class="button button-positive">
+                    Submit Service Location
+                </button>
+            </div>
+        </div>
+
+    </div>
+    {{/ionContent}}
+    {{> _adminTabs}}
+    {{else}}
+    <div class="page auth">
+        <h1 class="title-auth">Not Authorized</h1>
+    </div>
+    {{/if}}
+</template>

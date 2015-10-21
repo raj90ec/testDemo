@@ -1,0 +1,23 @@
+<template name="coordMessaging">
+  {{> _coordTabsHeader}}
+
+    {{#ionContent class="padding"}}
+        <h1>Messaging</h1>
+    {{#ionView}}
+    {{#ionContent}}
+    {{#ionList}}
+    {{#ionItem iconLeft=false iconRight=true}}
+    I can't make it in today. Sorry not sorry.
+    {{> ionIcon icon="person" class="positive"}}
+    {{/ionItem}}
+    {{#ionItem iconLeft=true iconRight=false}}
+    {{> ionIcon icon="social-freebsd-devil"}}
+    No bonus for you!
+    {{/ionItem}}
+    {{/ionList}}
+    {{/ionContent}}
+    {{/ionView}}
+    {{/ionContent}}
+
+  {{> _coordTabs}}
+</template>
